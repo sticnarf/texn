@@ -34,7 +34,7 @@ struct Config {
 
 lazy_static! {
     static ref CONFIG: Config = {
-        Config {num_thread: num_cpus::get() - 2,
+        Config {num_thread: num_cpus::get_physical(),
         swap_interval: 20,
         queue_privilige: vec![32, 4, 1],
         time_feedback: vec![1000, 300_000, 10_000_000],
